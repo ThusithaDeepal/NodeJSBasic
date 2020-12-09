@@ -6,12 +6,14 @@ app.set('view engine', 'ejs'); //need to define template enjine it automatically
 
 app.get("/", function (req, res) {
   // res.send("default page");
-  res.sendFile(__dirname + "/home.html");
+  // res.sendFile(__dirname + "/home.html");
+  res.render('home.ejs')
 })
 
 app.get('/Contact-Us', function (req, res) {
   // res.send('contactus page');
-  res.sendFile(__dirname + "/contactus.html");
+  // res.sendFile(__dirname + "/contactus.html");
+  res.render('contactus.ejs');
 })
 
 app.get('/profile/:name', function (req, res) {
