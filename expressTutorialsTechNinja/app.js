@@ -2,12 +2,12 @@ var express = require('express');
 var app = express();
 app.set('view engine', 'ejs'); //need to define template enjine it automatically access view folder
 
-
+app.use('/assets', express.static('assets'));
 
 app.get("/", function (req, res) {
   // res.send("default page");
   // res.sendFile(__dirname + "/home.html");
-  res.render('home.ejs')
+  res.render('index.ejs')
 })
 
 app.get('/Contact-Us', function (req, res) {
